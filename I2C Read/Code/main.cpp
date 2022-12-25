@@ -25,10 +25,11 @@ int main(void)
 {
 	DDRD = 0XFF;//set DDRD as output
 	i2c i2c1 = i2c(65);//constructor to write the decimal address 65 to pcf8574 , 65 meaning as read
-    
-	while (1) 
-    {
+	
+	while(1)
+	{
 		PORTD = i2c1.read();//i2c1 reading results are entered into PORTD
-    }
+	}
+
 }
 
